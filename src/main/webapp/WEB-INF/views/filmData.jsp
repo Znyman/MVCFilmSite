@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,7 +6,7 @@
 </head>
 <body>
     <h1>Film Details</h1>
-    <h2>Film Details</h2>
+    
     <p>Title: ${film.title}</p>
     <p>Director: ${film.director}</p>
     <p>Release Year: ${film.releaseYear}</p>
