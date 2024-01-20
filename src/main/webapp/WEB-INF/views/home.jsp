@@ -26,9 +26,7 @@
 		<input type="text" id="filmId" name="filmId" required> 
 			<input type="submit" value="Get Details">
 	</form>
-	<div id="filmDetails">
-		<!-- Film details will be displayed here -->
-	</div>
+
 	<br>
 	<h2>Add a film to database</h2>
 	<form action="NewFilm.do" method="POST" id="filmForm">

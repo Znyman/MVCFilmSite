@@ -6,8 +6,6 @@
     <title>Film Details</title>
 </head>
 <body>
-    <h1>Film Details</h1>
-    
   
   <c:choose>
     <c:when test="${! empty film}">
@@ -32,6 +30,13 @@
     </c:otherwise>
   </c:choose>
 
+<h3>Would you like to delete this film?</h3>
+    <br>
+    <form action="DeleteFilm.do" method="POST" id="filmForm">
+        <input type="hidden" name="filmId" value="${film.id}">
+        <input type="submit" value="Delete film">
+    <p>${deleteMessage}</p>
+    </form>
 
 
 </body>
