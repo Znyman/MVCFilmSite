@@ -64,7 +64,7 @@ public class FilmController {
 			message = "An error occurred while deleting the film.";
 		}
 		redirect.addFlashAttribute("deleteMessage", message);
-		mv.setViewName("redirect:filmData.do"); // Redirect to the film details page
+		mv.setViewName("redirect:filmData"); // Redirect to the film details page
 		return mv;
 	}
 
