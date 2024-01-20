@@ -32,6 +32,7 @@
 
 <h2>Would you like to modify this film?</h2>
 	<form action="UpdateFilm.do" method="POST" id="filmForm">
+     <input type="hidden" name="id" value="${film.id}">
     <label for="title"><em>Enter New Film Title:</em></label>
     <input type="text" id="title" name="title" required> 
     <br><br>
@@ -65,15 +66,7 @@
     <label for="replacementCost"><em>Enter New Film Replacement Cost:</em></label>
     <input type="number" id="replacementCost" name="replacementCost" value="1">
     <br><br>
-    
-    <label for="rating"><em>Enter New Film Rating:</em></label>
-    <input type="text" id="rating" name="rating">
-    <br><br>
-    
-    <label for="specialFeatures"><em>Enter New Film Special Features:</em></label>
-    <input type="text" id="specialFeatures" name="specialFeatures">
-    <br><br>
-    
+      
     <input type="submit" value="Update Film">
 </form>
 
@@ -83,7 +76,7 @@
 <h3>Would you like to delete this film?</h3>
     <br>
     <form action="DeleteFilm.do" method="POST" id="filmForm">
-        <input type="hidden" name="filmId" value="${film.id}">
+        <input type="hidden" name="id" value="${film.id}">
         <input type="submit" value="Delete film">
    
     </form>
