@@ -282,11 +282,13 @@ public class FilmDAOImpl implements DatabaseAccessor {
 			statement.setInt(11, film.getId());
 			int updateCount = statement.executeUpdate();
 			if (updateCount > 1) {
+				System.out.println("In the if to do rollback.");
 				conn.rollback();
 				statement.close();
 				conn.close();
 				return false;
 			} else {
+				System.out.println("In the else to commit.");
 				conn.commit(); // COMMIT TRANSACTION
 			}
 			statement.close();
