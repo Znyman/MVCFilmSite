@@ -13,15 +13,15 @@ import com.skilldistillery.film.entities.Film;
 
 @Controller
 public class FilmController {
-	
+
 	@Autowired
 	FilmDAOImpl filmDAO;
-	
+
 	@RequestMapping("")
 	public String home() {
 		return "home";
 	}
-	
+
 	@RequestMapping(path = "GetFilmId.do", params = "filmId", method = RequestMethod.GET)
 	public ModelAndView getFilmById(@RequestParam("filmId") int filmId) {
 		ModelAndView mv = new ModelAndView();
@@ -30,7 +30,7 @@ public class FilmController {
 		mv.setViewName("filmData");
 		return mv;
 	}
-	
+
 	@RequestMapping(path = "NewFilm.do", method = RequestMethod.POST)
 	public ModelAndView addFilmToDAO(Film film, RedirectAttributes redirect) {
 		ModelAndView mv = new ModelAndView();
@@ -39,11 +39,32 @@ public class FilmController {
 		mv.setViewName("redirect:filmAdded.do");
 		return mv;
 	}
-	
+
 	@RequestMapping(path = "filmAdded.do", method = RequestMethod.GET)
 	public ModelAndView filmCreated(Film film) {
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("filmData");
+		return mv;
+	}
+
+	@RequestMapping(path = "DeleteFilm.do", method = RequestMethod.POST)
+	public ModelAndView deleteFilmWithDAO(@RequestParam("filmId") int filmId, RedirectAttributes redirect) {
+		ModelAndView mv = new ModelAndView();
+		Film film = new Film(filmId);
+
+		String message = "";
+		try {
+			boolean success = filmDAO.deleteFilm(film);
+			if (success) {
+				message = "Film deleted successfully.";
+			} else {
+				message = "Failed to delete the film due to child records.";
+			}
+		} catch (Exception e) {
+			message = "An error occurred while deleting the film.";
+		}
+		redirect.addFlashAttribute("deleteMessage", message);
+		mv.setViewName("redirect:filmData.do"); // Redirect to the film details page
 		return mv;
 	}
 
