@@ -20,7 +20,7 @@
 	<h1>Film Query</h1>
 	<br>
 	<h2>Find film by ID</h2>
-	<form action="getFilmId.do" id="filmForm">
+	<form action="GetFilmId.do" id="filmForm">
 		<label for="filmId">Enter Film ID:</label> <input type="text"
 			id="filmId" name="filmId" required> <input type="submit"
 			value="Get Details">
@@ -28,6 +28,17 @@
 	<div id="filmDetails">
 		<!-- Film details will be displayed here -->
 	</div>
+		<br>
+		<h2>Add a film to database</h2>
+	<form action="NewFilm.do" id="filmForm">
+		<label for="filmId">Enter Film Details:</label> <input type="text"
+			id="filmId" name="filmId" required> <input type="submit"
+			value="Add Film">
+	</form>
+	<div id="filmDetails">
+		<!-- Film details will be displayed here -->
+	</div>
+	
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
