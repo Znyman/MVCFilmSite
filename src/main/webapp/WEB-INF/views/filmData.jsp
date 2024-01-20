@@ -8,6 +8,9 @@
     <h1>Film Details</h1>
     
   
+  <c:choose>
+    <c:when test="${! empty film}">
+      
  	<p>${film.id}</p>
 	<p>${film.title}</p>
 	<p>${film.description}</p>
@@ -21,5 +24,14 @@
 	<p>${film.specialFeatures}</p>
 	<p>${film.actors}</p>
 	<p>${film.language}</p>
+ 
+    </c:when>
+    <c:otherwise>
+      <p>No film found</p>
+    </c:otherwise>
+  </c:choose>
+
+
+
 </body>
 </html>
