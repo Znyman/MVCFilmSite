@@ -48,7 +48,7 @@ public class FilmController {
 	}
 
 	@RequestMapping(path = "DeleteFilm.do", method = RequestMethod.POST)
-	public ModelAndView deleteFilmWithDAO(@RequestParam("filmId") int filmId, RedirectAttributes redirect) {
+	public ModelAndView deleteFilmWithDAO(@RequestParam("filmId") int filmId) {
 		ModelAndView mv = new ModelAndView();
 		Film film = new Film(filmId);
 
@@ -63,8 +63,8 @@ public class FilmController {
 		} catch (Exception e) {
 			message = "An error occurred while deleting the film.";
 		}
-		redirect.addFlashAttribute("deleteMessage", message);
-		mv.setViewName("redirect:WEB-INF/views/filmData.jsp"); // Redirect to the film details page
+		mv.addObject("deleteMessage", message);
+		mv.setViewName("filmData"); // Redirect to the film details page
 		return mv;
 	}
 
