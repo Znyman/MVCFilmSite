@@ -266,11 +266,20 @@ public class FilmDAOImpl implements DatabaseAccessor {
 		try {
 			conn = DriverManager.getConnection(URL, USER, PASS);
 			conn.setAutoCommit(false); // START TRANSACTION
-			String sql = "UPDATE film SET title=?, description=? " + " WHERE id=?";
+			String sql = "UPDATE film SET title=?, description=?, release_year=?, language_id=?, rental_duration=?,"
+					+ " rental_rate=?, length=?, replacement_cost=?, rating=?, special_features=? " + " WHERE id=?";
 			PreparedStatement statement = conn.prepareStatement(sql);
 			statement.setString(1, film.getTitle());
 			statement.setString(2, film.getDescription());
-			statement.setInt(3, film.getId());
+			statement.setInt(3, film.getReleaseYear());
+			statement.setInt(4, film.getLanguageID());
+			statement.setInt(5, film.getRentalDuration());
+			statement.setDouble(6, film.getRentalRate());
+			statement.setInt(7, film.getLength());
+			statement.setDouble(8, film.getReplacementCost());
+			statement.setString(9, film.getRating());
+			statement.setString(10, film.getSpecialFeatures());
+			statement.setInt(11, film.getId());
 			int updateCount = statement.executeUpdate();
 			if (updateCount > 1) {
 				conn.rollback();
