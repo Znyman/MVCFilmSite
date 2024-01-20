@@ -41,37 +41,37 @@
 		<input type="text" id="description" name="description" required> 
 		<br>
 		<br>
-		<label for="release year"><em>Enter New Film Release Year:</em></label>
-		<input type="text" id="release year" name="release year" required> 
+		<label for="releaseYear"><em>Enter New Film Release Year:</em></label>
+		<input type="text" id="releaseYear" name="releaseYear"> 
 		<br>
 		<br>
-		<label for="language id"><em>Enter New Film Language ID:</em></label> 
-		<input type="text" id="language id" name="language id"> 
+		<label for="languageID"><em>Enter New Film Language ID:</em></label> 
+		<input type="text" id="languageID" name="languageID"> 
 		<br>
 		<p>1. English 2. Italian 3. Japanese 4. Mandarin 5. French 6. German</p>
 		<br>
-		<label for="rental duration"><em>Enter New Film Rental Duration:</em></label>
-		<input type="text" id="rental duration" name="rental duration"> 
+		<label for="rentalDuration"><em>Enter New Film Rental Duration:</em></label>
+		<input type="text" id="rentalDuration" name="rentalDuration"> 
 		<br>
 		<br>
-		<label for="rental rate"><em>Enter New Film Rental Rate:</em></label>
-		<input type="text" id="rental rate" name="rental rate"> 
+		<label for="rentalRate"><em>Enter New Film Rental Rate:</em></label>
+		<input type="text" id="rentalRate" name="rentalRate"> 
 		<br>
 		<br>
 		<label for="length"><em>Enter New Film Length:</em></label>
 		<input type="text" id="length" name="length"> 
 		<br>
 		<br>
-		<label for="replacement cost"><em>Enter New Film Replacement Cost:</em></label>
-		<input type="text" id="replacement cost" name="replacement cost"> 
+		<label for="replacementCost"><em>Enter New Film Replacement Cost:</em></label>
+		<input type="text" id="replacementCost" name="replacementCost"> 
 		<br>
 		<br>
 		<label for="rating"><em>Enter New Film Rating:</em></label>
 		<input type="text" id="rating" name="rating"> 
 		<br>
 		<br>
-		<label for="special features"><em>Enter New Film Special Features:</em></label>
-		<input type="text" id="special features" name="special features"> 
+		<label for="specialFeatures"><em>Enter New Film Special Features:</em></label>
+		<input type="text" id="specialFeatures" name="specialFeatures"> 
 		<br>
 		<br>
 		<label for="actors"><em>Enter New Film Actors:</em></label>
