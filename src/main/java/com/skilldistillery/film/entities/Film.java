@@ -17,6 +17,10 @@ public class Film {
 	String specialFeatures;
 	List<Actor> actors;
 	String language;
+	
+	public Film() {
+		
+	}
 
 	public Film(String title) {
 		this.title = title;
