@@ -64,7 +64,26 @@ public class FilmController {
 			message = "An error occurred while deleting the film.";
 		}
 		mv.addObject("deleteMessage", message);
-		mv.setViewName("filmData"); // Redirect to the film details page
+		mv.setViewName("deleteFilm");
+		return mv;
+	}
+
+	@RequestMapping(path = "UpdateFilm.do", method = RequestMethod.POST)
+	public ModelAndView updateFilmWithDAO(Film film) {
+		ModelAndView mv = new ModelAndView();
+		String message = "";
+		try {
+			boolean success = filmDAO.updateFilm(film);
+			if (success) {
+				message = "Film updated successfully.";
+			} else {
+				message = "Failed to update the film due to child records.";
+			}
+		} catch (Exception e) {
+			message = "An error occurred while deleting the film.";
+		}
+		mv.addObject("updateMessage", message);
+		mv.setViewName("updateFilm");
 		return mv;
 	}
 
