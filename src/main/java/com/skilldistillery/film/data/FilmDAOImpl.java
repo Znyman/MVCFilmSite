@@ -280,6 +280,7 @@ public class FilmDAOImpl implements DatabaseAccessor {
 			statement.setString(9, film.getRating());
 			statement.setString(10, film.getSpecialFeatures());
 			statement.setInt(11, film.getId());
+			System.out.println(statement.toString());
 			int updateCount = statement.executeUpdate();
 			if (updateCount > 1) {
 				System.out.println("In the if to do rollback.");
