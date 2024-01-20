@@ -22,6 +22,11 @@ public class Film {
 		this.title = title;
 	}
 	
+	public Film(String title, String description) {
+		this(title);
+		this.description = description;
+	}
+	
 	public Film(int id) {
 		this.id = id;
 	}
