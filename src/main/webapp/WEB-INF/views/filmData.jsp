@@ -42,28 +42,28 @@
 		<br>
 		<br>
 		<label for="releaseYear"><em>Enter New Film Release Year:</em></label>
-		<input type="text" id="releaseYear" name="releaseYear"> 
+		<input type="number" id="releaseYear" name="releaseYear"> 
 		<br>
 		<br>
 		<label for="languageID"><em>Enter New Film Language ID:</em></label> 
-		<input type="text" id="languageID" name="languageID"> 
+		<input type="number" id="languageID" name="languageID"> 
 		<br>
 		<p>1. English 2. Italian 3. Japanese 4. Mandarin 5. French 6. German</p>
 		<br>
 		<label for="rentalDuration"><em>Enter New Film Rental Duration:</em></label>
-		<input type="text" id="rentalDuration" name="rentalDuration"> 
+		<input type="number" id="rentalDuration" name="rentalDuration"> 
 		<br>
 		<br>
 		<label for="rentalRate"><em>Enter New Film Rental Rate:</em></label>
-		<input type="text" id="rentalRate" name="rentalRate"> 
+		<input type="number" id="rentalRate" name="rentalRate"> 
 		<br>
 		<br>
 		<label for="length"><em>Enter New Film Length:</em></label>
-		<input type="text" id="length" name="length"> 
+		<input type="number" id="length" name="length"> 
 		<br>
 		<br>
 		<label for="replacementCost"><em>Enter New Film Replacement Cost:</em></label>
-		<input type="text" id="replacementCost" name="replacementCost"> 
+		<input type="number" id="replacementCost" name="replacementCost"> 
 		<br>
 		<br>
 		<label for="rating"><em>Enter New Film Rating:</em></label>
@@ -74,9 +74,7 @@
 		<input type="text" id="specialFeatures" name="specialFeatures"> 
 		<br>
 		<br>
-		<label for="actors"><em>Enter New Film Actors:</em></label>
-		<input type="text" id="actors" name="actors" > 
-		<br>
+			
 		<input type="submit" value="Update Film">
 	</form>
 
