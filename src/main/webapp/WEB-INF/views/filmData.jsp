@@ -45,9 +45,10 @@
 		<input type="text" id="release year" name="release year" required> 
 		<br>
 		<br>
-		<label for="language id"><em>Enter New Film Language ID:</em></label>
+		<label for="language id"><em>Enter New Film Language ID:</em></label> 
 		<input type="text" id="language id" name="language id"> 
 		<br>
+		<p>1. English 2. Italian 3. Japanese 4. Mandarin 5. French 6. German</p>
 		<br>
 		<label for="rental duration"><em>Enter New Film Rental Duration:</em></label>
 		<input type="text" id="rental duration" name="rental duration"> 
