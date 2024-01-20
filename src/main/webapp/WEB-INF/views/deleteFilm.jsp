@@ -8,5 +8,7 @@
 </head>
 <body>
 <h2>${deleteMessage}</h2>
+<br>
+<a href="home.jsp">Return to main page</a>
 </body>
 </html>
