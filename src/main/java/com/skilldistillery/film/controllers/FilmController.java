@@ -71,6 +71,7 @@ public class FilmController {
 	@RequestMapping(path = "UpdateFilm.do", method = RequestMethod.POST)
 	public ModelAndView updateFilmWithDAO(Film film) {
 		ModelAndView mv = new ModelAndView();
+		System.out.println("THE FILM ID IS " + film.getId());
 		String message = "";
 		try {
 			boolean success = filmDAO.updateFilm(film);
