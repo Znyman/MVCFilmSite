@@ -30,12 +30,25 @@
     </c:otherwise>
   </c:choose>
 
+<h2>Would you like to modify this film?</h2>
+	<form action=".do" method="POST" id="filmForm">
+		
+		<label for="title"><em>Enter New Film Title:</em></label>
+		 <input type="text" id="title" name="title" required> 
+
+		<label for="description"><em>Enter New Film Description:</em></label>
+		<input type="text" id="description" name="description" required> 
+		<input type="submit" value="Add Film">
+	</form>
+
+
+
 <h3>Would you like to delete this film?</h3>
     <br>
     <form action="DeleteFilm.do" method="POST" id="filmForm">
         <input type="hidden" name="filmId" value="${film.id}">
         <input type="submit" value="Delete film">
-    <p>${deleteMessage}</p>
+   
     </form>
 
 
