@@ -14,7 +14,7 @@
   </head>
   <body>
     <h1>Hello, world!</h1>
-	<form id="filmForm">
+	<form action="filmData.do" id="filmForm">
         <label for="filmId">Enter Film ID:</label>
         <input type="text" id="filmId" name="filmId" required>
         <input type="submit" value="Get Details">
