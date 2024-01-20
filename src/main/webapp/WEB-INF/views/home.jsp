@@ -33,10 +33,10 @@
 	<h2>Add a film to database</h2>
 	<form action="NewFilm.do" method="POST" id="filmForm">
 		
-		<label for="title">Enter Film Title:</label>
+		<label for="title"><em>Enter Film Title:</em></label>
 		 <input type="text" id="title" name="title" required> 
 
-		<label for="description">Enter Film Description:</label>
+		<label for="description"><em>Enter Film Description:</em></label>
 		<input type="text" id="description" name="description" required> 
 		<input type="submit" value="Add Film">
 	</form>
