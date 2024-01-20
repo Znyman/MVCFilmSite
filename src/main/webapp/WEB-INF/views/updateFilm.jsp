@@ -9,6 +9,6 @@
 <body>
 <h2>${updateMessage}</h2>
 <br>
-<a href="home.jsp">Return to main page</a>
+<a href="WEB-INF/views/home.jsp">Return to main page</a>
 </body>
 </html>
