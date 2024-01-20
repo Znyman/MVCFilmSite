@@ -1,10 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-<<<<<<< HEAD
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
-=======
-	pageEncoding="UTF-8"%>
->>>>>>> 91f3697d8dda8577f023d302a7ce2fdaaebe6710
 <!doctype html>
 <html lang="en">
 <head>
@@ -25,7 +20,7 @@
 	<h1>Film Query</h1>
 	<br>
 	<h2>Find film by ID</h2>
-	<form action="filmData.do" id="filmForm">
+	<form action="getFilmId.do" id="filmForm">
 		<label for="filmId">Enter Film ID:</label> <input type="text"
 			id="filmId" name="filmId" required> <input type="submit"
 			value="Get Details">
