@@ -73,7 +73,6 @@ public class FilmController {
 	@RequestMapping(path = "UpdateFilm.do", method = RequestMethod.POST)
 	public ModelAndView updateFilmWithDAO(Film film) {
 		ModelAndView mv = new ModelAndView();
-		System.out.println("THE FILM ID IS " + film.getId());
 		String message = "";
 		try {
 			boolean success = filmDAO.updateFilm(film);
@@ -90,7 +89,7 @@ public class FilmController {
 		return mv;
 	}
 	
-	@RequestMapping(path = "KeywordFilm.do", method = RequestMethod.POST)
+	@RequestMapping(path = "KeywordFilm.do", method = RequestMethod.GET)
 	public ModelAndView findFilmsByKeyword(@RequestParam("filmKeyword") String keyword) {
 		ModelAndView mv = new ModelAndView();
 		List<Film> films = filmDAO.findFilmsByKeyword(keyword);
