@@ -1,5 +1,7 @@
 package com.skilldistillery.film.controllers;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,10 +24,10 @@ public class FilmController {
 		return "home";
 	}
 
-	@RequestMapping(path = "GetFilmId.do", params = "filmId", method = RequestMethod.GET)
-	public ModelAndView getFilmById(@RequestParam("filmId") int filmId) {
+	@RequestMapping(path = "GetFilmId.do", params = "id", method = RequestMethod.GET)
+	public ModelAndView getFilmById(@RequestParam("id") int id) {
 		ModelAndView mv = new ModelAndView();
-		Film film = filmDAO.findFilmById(filmId);
+		Film film = filmDAO.findFilmById(id);
 		mv.addObject("film", film);
 		mv.setViewName("filmData");
 		return mv;
@@ -48,9 +50,9 @@ public class FilmController {
 	}
 
 	@RequestMapping(path = "DeleteFilm.do", method = RequestMethod.POST)
-	public ModelAndView deleteFilmWithDAO(@RequestParam("filmId") int filmId) {
+	public ModelAndView deleteFilmWithDAO(@RequestParam("id") int id) {
 		ModelAndView mv = new ModelAndView();
-		Film film = new Film(filmId);
+		Film film = new Film(id);
 
 		String message = "";
 		try {
@@ -85,6 +87,15 @@ public class FilmController {
 		}
 		mv.addObject("updateMessage", message);
 		mv.setViewName("updateFilm");
+		return mv;
+	}
+	
+	@RequestMapping(path = "KeywordFilm.do", method = RequestMethod.POST)
+	public ModelAndView findFilmsByKeyword(@RequestParam("filmKeyword") String keyword) {
+		ModelAndView mv = new ModelAndView();
+		List<Film> films = filmDAO.findFilmsByKeyword(keyword);
+		mv.addObject("films", films);
+		mv.setViewName("keywordFilm");
 		return mv;
 	}
 
