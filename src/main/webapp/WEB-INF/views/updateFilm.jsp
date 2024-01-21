@@ -7,6 +7,8 @@
 <title>Update Film</title>
 </head>
 <body>
+<h2>${film}</h2>
+<br>
 <h2>${updateMessage}</h2>
 <br>
 <a href="WEB-INF/views/home.jsp">Return to main page</a>

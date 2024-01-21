@@ -28,7 +28,7 @@
 	</form>
 
 	<br>
-<h1>Film Query</h1>
+
 	<br>
 	<h2>Find film by keyword</h2>
 	<form action="KeywordFilm.do" method="GET" id="filmForm">
