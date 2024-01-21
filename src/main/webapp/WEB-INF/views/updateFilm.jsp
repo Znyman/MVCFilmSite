@@ -11,6 +11,6 @@
 <br>
 <h2>${updateMessage}</h2>
 <br>
-<a href="WEB-INF/views/home.jsp">Return to main page</a>
+
 </body>
 </html>
