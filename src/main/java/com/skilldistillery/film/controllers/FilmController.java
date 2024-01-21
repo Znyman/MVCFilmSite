@@ -85,6 +85,7 @@ public class FilmController {
 			message = "An error occurred while deleting the film.";
 		}
 		mv.addObject("updateMessage", message);
+		mv.addObject("film", film);
 		mv.setViewName("updateFilm");
 		return mv;
 	}
