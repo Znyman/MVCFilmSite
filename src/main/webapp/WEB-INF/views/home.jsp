@@ -22,11 +22,20 @@
 	<br>
 	<h2>Find film by ID</h2>
 	<form action="GetFilmId.do" method="GET" id="filmForm">
-		<label for="filmId">Enter Film ID:</label>
-		<input type="text" id="filmId" name="filmId" required> 
+		<label for="id">Enter Film ID:</label>
+		<input type="text" id="id" name="id" required> 
 			<input type="submit" value="Get Details">
 	</form>
 
+	<br>
+<h1>Film Query</h1>
+	<br>
+	<h2>Find film by keyword</h2>
+	<form action="KeywordFilm.do" method="GET" id="filmForm">
+		<label for="filmKeyword">Enter Film Keyword:</label>
+		<input type="text" id="filmKeyword" name="filmKeyword" required> 
+			<input type="submit" value="Get Details">
+	</form>
 	<br>
 	<h2>Add a film to database</h2>
 	<form action="NewFilm.do" method="POST" id="filmForm">
