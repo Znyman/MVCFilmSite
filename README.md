@@ -1,7 +1,5 @@
 <h1>MVCFilmSite</h1>
 <br>
-<img src="https://pngimg.com/d/database_PNG9.png">
-<br>
 <h3>Description</h3>
 This application is a streamlined web platform designed for efficient management of film records. It leverages the Spring MVC framework to facilitate web application development in Java, interfacing with a MySQL database for comprehensive CRUD (Create, Read, Update, Delete) functionalities. The application caters to various user needs, from adding and retrieving film details to updating and deleting records, ensuring a smooth and interactive user experience.
 
