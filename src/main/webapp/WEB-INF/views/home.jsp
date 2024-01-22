@@ -18,30 +18,32 @@
 <title>Film Query</title>
 </head>
 <body>
-	<h1>Film Query</h1>
+	<center><h1>Film Query</h1></center>
 	<br>
-	<div class="mb-3">
+	<div class="mb-3" style="padding: 0 500px;">
 	<h2>Find film by ID</h2>
 	<form action="GetFilmId.do" method="GET" id="filmForm">
 		<label for="id">Enter Film ID:</label>
 		<input type="text" id="id" class="form-control" name="id" required> 
+			<br>
 			<input type="submit" class="btn btn-primary" value="Get Details">
 	</form>
 	</div>
 	<br>
 
 	<br>
+	<div class="form-group" style="padding: 0 500px;">
 	<h2>Find film by keyword</h2>
-	<div class="form-group">
 	<form action="KeywordFilm.do" method="GET" id="filmForm">
 		<label for="filmKeyword">Enter Film Keyword:</label>
 		<input type="text" class="form-control" id="filmKeyword" name="filmKeyword" required> 
+			<br>
 			<input type="submit" class="btn btn-primary" value="Get Details">
 	</form>
 	</div>
 	<br>
+	<div class="form-group" style="padding: 0 500px;">
 	<h2>Add a film to database</h2>
-	<div class="form-group">
 	<form action="NewFilm.do" method="POST" id="filmForm">
 		
 		<label for="title"><em>Enter Film Title:</em></label>
@@ -49,6 +51,7 @@
 
 		<label for="description"><em>Enter Film Description:</em></label>
 		<input type="text" class="form-control" id="description" name="description" required> 
+		<br>
 		<input type="submit" class="btn btn-primary" value="Add Film">
 	</form>
 	</div>
